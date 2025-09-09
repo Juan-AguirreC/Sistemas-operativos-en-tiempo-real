@@ -1,0 +1,5 @@
+C:\Projects_K64\Sistemas Operativos\Proyecto_1\drivers/fsl_clock.h:668:20:CLOCK_EnableClock	24	static
+C:\Projects_K64\Sistemas Operativos\Proyecto_1\drivers/fsl_port.h:271:20:PORT_SetPinConfig	32	static
+C:\Projects_K64\Sistemas Operativos\Proyecto_1\drivers/fsl_port.h:374:20:PORT_SetPinMux	24	static
+C:\Projects_K64\Sistemas Operativos\Proyecto_1\drivers/fsl_port.h:443:20:PORT_SetPinInterruptConfig	24	static
+../source/GPIO.c:9:6:GPIO_config	24	static

@@ -1,0 +1,7 @@
+C:\Projects_K64\Sistemas Operativos\Proyecto_1\drivers/fsl_uart.h:667:23:UART_ReadByte	16	static
+../source/Proyecto_1.c:34:6:UART0_RX_TX_IRQHandler	16	static
+../source/Proyecto_1.c:61:5:main	32	static
+../source/Proyecto_1.c:79:6:Thd_2ms	4	static
+../source/Proyecto_1.c:80:6:Thd_5ms	4	static
+../source/Proyecto_1.c:81:6:Thd_10ms	4	static
+../source/Proyecto_1.c:83:6:Pit_Handler	4	static
