@@ -1,4 +1,5 @@
-source/Proyecto_1.o source/Proyecto_1.d: ../source/Proyecto_1.c \
+source/thread0.o source/thread0.d: ../source/thread0.c \
+ ../source/thread0.h \
  C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/board.h \
  C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/clock_config.h \
  C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_common.h \
@@ -15,19 +16,9 @@ source/Proyecto_1.o source/Proyecto_1.d: ../source/Proyecto_1.c \
  C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_common.h \
  C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_gpio.h \
  C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_port.h \
- C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/peripherals.h \
- C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/pin_mux.h \
- C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/clock_config.h \
- C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\utilities/fsl_debug_console.h \
- C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\component\serial_manager/fsl_component_serial_manager.h \
- C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\component\serial_manager/fsl_component_serial_port_uart.h \
- C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\component\uart/fsl_adapter_uart.h \
- ../source/RMS.h ../source/pit.h \
- C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_pit.h \
- ../source/thread0.h ../source/UART_driver/UART_driver.h \
- C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_uart.h \
- ../source/thread1.h ../source/GPIO.h ../source/bits.h \
- ../source/thread2.h
+ ../source/UART_driver/UART_driver.h \
+ C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_uart.h
+../source/thread0.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/board.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/clock_config.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_common.h:
@@ -44,20 +35,5 @@ C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_clock.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_common.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_gpio.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_port.h:
-C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/peripherals.h:
-C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/pin_mux.h:
-C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/clock_config.h:
-C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\utilities/fsl_debug_console.h:
-C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\component\serial_manager/fsl_component_serial_manager.h:
-C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\component\serial_manager/fsl_component_serial_port_uart.h:
-C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\component\uart/fsl_adapter_uart.h:
-../source/RMS.h:
-../source/pit.h:
-C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_pit.h:
-../source/thread0.h:
 ../source/UART_driver/UART_driver.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_uart.h:
-../source/thread1.h:
-../source/GPIO.h:
-../source/bits.h:
-../source/thread2.h:

@@ -1,0 +1,2 @@
+../source/thread1.c:3:6:thread1_init	8	static
+../source/thread1.c:7:6:Thd_5ms	4	static

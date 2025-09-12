@@ -8,21 +8,30 @@ C_SRCS += \
 ../source/Proyecto_1.c \
 ../source/RMS.c \
 ../source/pit.c \
-../source/semihost_hardfault.c 
+../source/semihost_hardfault.c \
+../source/thread0.c \
+../source/thread1.c \
+../source/thread2.c 
 
 C_DEPS += \
 ./source/GPIO.d \
 ./source/Proyecto_1.d \
 ./source/RMS.d \
 ./source/pit.d \
-./source/semihost_hardfault.d 
+./source/semihost_hardfault.d \
+./source/thread0.d \
+./source/thread1.d \
+./source/thread2.d 
 
 OBJS += \
 ./source/GPIO.o \
 ./source/Proyecto_1.o \
 ./source/RMS.o \
 ./source/pit.o \
-./source/semihost_hardfault.o 
+./source/semihost_hardfault.o \
+./source/thread0.o \
+./source/thread1.o \
+./source/thread2.o 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -37,7 +46,7 @@ source/%.o: ../source/%.c source/subdir.mk
 clean: clean-source
 
 clean-source:
-	-$(RM) ./source/GPIO.d ./source/GPIO.o ./source/Proyecto_1.d ./source/Proyecto_1.o ./source/RMS.d ./source/RMS.o ./source/pit.d ./source/pit.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o
+	-$(RM) ./source/GPIO.d ./source/GPIO.o ./source/Proyecto_1.d ./source/Proyecto_1.o ./source/RMS.d ./source/RMS.o ./source/pit.d ./source/pit.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o ./source/thread0.d ./source/thread0.o ./source/thread1.d ./source/thread1.o ./source/thread2.d ./source/thread2.o
 
 .PHONY: clean-source
 

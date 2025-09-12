@@ -41,9 +41,77 @@ void GPIO_config(void)
 
 	PORT_SetPinConfig(PORTA, bit_4, &porta4_pin38_config);
 	GPIO_PinInit(GPIOA, bit_4, &sw_config);
-	PORT_SetPinInterruptConfig(PORTA, bit_4, kPORT_DMAFallingEdge);
 
-	PORT_SetPinMux(PORTB, bit_22, kPORT_MuxAsGpio);
+	PORT_SetPinConfig(PORTC, bit_6, &porta4_pin38_config);
+	GPIO_PinInit(GPIOC, bit_6, &sw_config);
+
 	/* Init output LED GPIO. */
+	//Red Led
+	PORT_SetPinMux(PORTB, bit_22, kPORT_MuxAsGpio);
 	GPIO_PinInit(GPIOB, bit_22, &led_config);
+	//Blue Led
+	PORT_SetPinMux(PORTB, bit_21, kPORT_MuxAsGpio);
+	GPIO_PinInit(GPIOB, bit_21, &led_config);
+	//Green Led
+	PORT_SetPinMux(PORTE, bit_26, kPORT_MuxAsGpio);
+	GPIO_PinInit(GPIOE, bit_26, &led_config);
+}
+
+bool Read_SW2(void) {
+    return (GPIO_PinRead(GPIOC, 6U) == 0);  // true si está presionado
+}
+
+bool Read_SW3(void) {
+    return (GPIO_PinRead(GPIOA, 4U) == 0);  // true si está presionado
+}
+
+void LED_On(board_led_t led) {
+    switch (led) {
+        case LED_RED:
+            GPIO_PinWrite(GPIOB, 22U, 0);
+            break;
+        case LED_GREEN:
+            GPIO_PinWrite(GPIOE, 26U, 0);
+            break;
+        case LED_BLUE:
+            GPIO_PinWrite(GPIOB, 21U, 0);
+            break;
+    }
+}
+
+void LED_Off(board_led_t led) {
+    switch (led) {
+        case LED_RED:
+            GPIO_PinWrite(GPIOB, 22U, 1);
+            break;
+        case LED_GREEN:
+            GPIO_PinWrite(GPIOE, 26U, 1);
+            break;
+        case LED_BLUE:
+            GPIO_PinWrite(GPIOB, 21U, 1);
+            break;
+    }
+}
+
+void LED_Toggle(board_led_t led){
+    switch (led) {
+        case LED_RED:
+        {
+            uint32_t cur = GPIO_PinRead(GPIOB, 22U);
+            GPIO_PinWrite(GPIOB, 22U, cur ? 0U : 1U);
+            break;
+        }
+        case LED_GREEN:
+        {
+            uint32_t cur = GPIO_PinRead(GPIOE, 26U);
+            GPIO_PinWrite(GPIOE, 26U, cur ? 0U : 1U);
+            break;
+        }
+        case LED_BLUE:
+        {
+            uint32_t cur = GPIO_PinRead(GPIOB, 21U);
+            GPIO_PinWrite(GPIOB, 21U, cur ? 0U : 1U);
+            break;
+        }
+    }
 }

@@ -10,7 +10,6 @@
 #define DEMO_UART_CLK_FREQ CLOCK_GetFreq(UART0_CLK_SRC)
 #define DEMO_UART_IRQn     UART0_RX_TX_IRQn
 
-
 void UART_init();
 
 void UART_TX(uint8_t txbuff[], int len);

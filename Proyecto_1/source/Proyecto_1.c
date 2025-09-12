@@ -15,14 +15,13 @@
 #include "pin_mux.h"
 #include "clock_config.h"
 #include "fsl_debug_console.h"
-#include "fsl_uart.h"
 #include "RMS.h"
+#include "pit.h"
+#include "thread0.h"
+#include "thread1.h"
+#include "thread2.h"
 
-#define DEMO_UART            UART0
-#define DEMO_UART_CLKSRC     UART0_CLK_SRC
-#define DEMO_UART_CLK_FREQ   CLOCK_GetFreq(UART0_CLK_SRC)
-#define DEMO_UART_IRQn       UART0_RX_TX_IRQn
-#define DEMO_UART_IRQHandler UART0_RX_TX_IRQHandler
+
 /* TODO: insert other include files here. */
 
 /* TODO: insert other definitions and declarations here. */
@@ -31,25 +30,8 @@
  * @brief   Application entry point.
  */
 
-void DEMO_UART_IRQHandler(void)
-{
-    uint8_t data;
-
-    /* If new data arrived. */
-    if ((kUART_RxDataRegFullFlag | kUART_RxOverrunFlag) & UART_GetStatusFlags(DEMO_UART))
-    {
-        data = UART_ReadByte(DEMO_UART);
-        UART_WriteBlocking(DEMO_UART, &data, sizeof(data) / sizeof(data));
-
-    }
-    SDK_ISR_EXIT_BARRIER;
-}
-
-void Thd_2ms(void);
-void Thd_5ms(void);
-void Thd_10ms(void);
 void Pit_Handler(void);
-
+void Thread_init(void);
 
 ThdObj ThreadTable[]= {
 		{Thd_2ms, STANDBY,	2, 0},
@@ -60,25 +42,24 @@ ThdObj ThreadTable[]= {
 
 int main(void) {
 
-
-	uart_config_t config;
-
 	BOARD_InitBootPins();
 	BOARD_InitBootClocks();
 
-	UART_init();
+	Thread_init();
 
 	uint8_t tableCounter = 0;
 
 	while(1) {
-		//for(tableCounter)
+		for(tableCounter = 0; tableCounter < 3; tableCounter++){
+			if(ThreadTable[tableCounter].ThreadState == READY){
+				ThreadTable[tableCounter].ThreadState = EXECUTE;
+				ThreadTable[tableCounter].ThreadHandler();
+				ThreadTable[tableCounter].ThreadState = STANDBY;
+			}
+		}
 	}
 	return 0 ;
 }
-
-void Thd_2ms(void){};
-void Thd_5ms(void){};
-void Thd_10ms(void){};
 
 void Pit_Handler(void){
 	static uint8_t tableCounter = 0;
@@ -91,3 +72,13 @@ void Pit_Handler(void){
 		}
 	}
 }
+
+void Thread_init(void){
+	PIT_init(1000);
+	set_callback_PIT(Pit_Handler);
+
+	thread0_init();
+	thread1_init();
+	thread2_init();
+}
+

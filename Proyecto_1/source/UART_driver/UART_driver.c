@@ -1,7 +1,6 @@
 #include "UART_driver.h"
 
 void UART_init(){
-	uint8_t ch;
 	uart_config_t config;
 
 	/*
@@ -22,6 +21,8 @@ void UART_init(){
 	/* Enable RX interrupt. */
 	UART_EnableInterrupts(DEMO_UART, kUART_RxDataRegFullInterruptEnable | kUART_RxOverrunInterruptEnable);
 	EnableIRQ(DEMO_UART_IRQn);
+	uint8_t clear_cmd[] = "\033[2J\033[H";
+	UART_WriteBlocking(UART0, clear_cmd, sizeof(clear_cmd) - 1);
 }
 
 void UART_TX(uint8_t txbuff[], int len){

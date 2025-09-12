@@ -1,5 +1,5 @@
 C:\Projects_K64\Sistemas Operativos\Proyecto_1\CMSIS/core_cm4.h:1679:22:__NVIC_EnableIRQ	16	static
 C:\Projects_K64\Sistemas Operativos\Proyecto_1\drivers/fsl_common_arm.h:499:24:EnableIRQ	24	static
-../source/UART_driver/UART_driver.c:3:6:UART_init	24	static
-../source/UART_driver/UART_driver.c:27:6:UART_TX	16	static
-../source/UART_driver/UART_driver.c:30:9:UART_RX	16	static
+../source/UART_driver/UART_driver.c:3:6:UART_init	32	static
+../source/UART_driver/UART_driver.c:28:6:UART_TX	16	static
+../source/UART_driver/UART_driver.c:31:9:UART_RX	16	static
