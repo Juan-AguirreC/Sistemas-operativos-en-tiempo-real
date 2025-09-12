@@ -22,9 +22,6 @@
 #include "thread2.h"
 
 uint8_t scheduler_event = 0;
-/* TODO: insert other include files here. */
-
-/* TODO: insert other definitions and declarations here. */
 
 /*
  * @brief   Application entry point.

@@ -1,9 +1,3 @@
-/*
- * GPIO.c
- *
- *  Created on: 16 feb 2022
- *      Author: LUISPIZANO
- */
 #include "GPIO.h"
 
 void GPIO_config(void)
@@ -56,6 +50,9 @@ void GPIO_config(void)
 	//Green Led
 	PORT_SetPinMux(PORTE, bit_26, kPORT_MuxAsGpio);
 	GPIO_PinInit(GPIOE, bit_26, &led_config);
+
+	PORT_SetPinMux(PORTE, bit_24, kPORT_MuxAsGpio);
+	GPIO_PinInit(GPIOE, bit_24, &led_config);
 
 	LED_Off(LED_RED);
 	LED_Off(LED_GREEN);

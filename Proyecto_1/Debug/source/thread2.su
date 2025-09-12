@@ -1,2 +1,5 @@
-../source/thread2.c:7:6:thread2_init	8	static
-../source/thread2.c:12:6:Thd_10ms	16	static
+../source/thread2.c:10:6:thread2_init	8	static
+../source/thread2.c:15:6:Thd_10ms	24	static
+../source/thread2.c:48:6:ftoa	48	static
+../source/thread2.c:71:5:intToStr	32	static
+../source/thread2.c:88:6:reverse	32	static

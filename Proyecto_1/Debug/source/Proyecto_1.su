@@ -1,4 +1,4 @@
-../source/Proyecto_1.c:44:5:main	16	static
-../source/Proyecto_1.c:70:6:Pit_Handler	4	static
-../source/Proyecto_1.c:83:6:Thread_init	8	static
-../source/Proyecto_1.c:92:6:Iddle	4	static
+../source/Proyecto_1.c:41:5:main	16	static
+../source/Proyecto_1.c:67:6:Pit_Handler	4	static
+../source/Proyecto_1.c:80:6:Thread_init	8	static
+../source/Proyecto_1.c:89:6:Iddle	4	static

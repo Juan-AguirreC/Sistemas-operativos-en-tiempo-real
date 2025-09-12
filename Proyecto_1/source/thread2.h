@@ -1,3 +1,4 @@
+#include <math.h>
 #include "board.h"
 #include "UART_driver/UART_driver.h"
 #include "ADC.h"
@@ -8,3 +9,10 @@
 void thread2_init(void);
 
 void Thd_10ms(void);
+
+void ftoa(float n, char* res, int afterpoint);
+
+int intToStr(int x, char str[], int d);
+
+void reverse(char* str, int len);
+
