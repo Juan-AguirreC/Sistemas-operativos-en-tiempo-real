@@ -15,7 +15,14 @@ source/thread2.o source/thread2.d: ../source/thread2.c \
  C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_clock.h \
  C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_common.h \
  C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_gpio.h \
- C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_port.h
+ C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_port.h \
+ ../source/UART_driver/UART_driver.h \
+ C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_uart.h \
+ ../source/ADC.h \
+ C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/pin_mux.h \
+ C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/clock_config.h \
+ C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_adc16.h \
+ ../source/thread0.h
 ../source/thread2.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/board.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/clock_config.h:
@@ -33,3 +40,10 @@ C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_clock.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_common.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_gpio.h:
 C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_port.h:
+../source/UART_driver/UART_driver.h:
+C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_uart.h:
+../source/ADC.h:
+C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/pin_mux.h:
+C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\board/clock_config.h:
+C:\Projects_K64\Sistemas\ Operativos\Proyecto_1\drivers/fsl_adc16.h:
+../source/thread0.h:

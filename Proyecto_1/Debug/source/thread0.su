@@ -1,7 +1,8 @@
 C:\Projects_K64\Sistemas Operativos\Proyecto_1\drivers/fsl_uart.h:667:23:UART_ReadByte	16	static
-../source/thread0.c:8:6:thread0_init	8	static
-../source/thread0.c:12:6:Thd_2ms	16	static
-../source/thread0.c:40:6:set_command	16	static
-../source/thread0.c:49:9:get_command	4	static
-../source/thread0.c:53:6:know_command	8	static
-../source/thread0.c:71:6:UART0_RX_TX_IRQHandler	8	static
+../source/thread0.c:9:6:thread0_init	8	static
+../source/thread0.c:13:6:Thd_2ms	16	static
+../source/thread0.c:41:6:set_command	16	static
+../source/thread0.c:50:9:get_command	4	static
+../source/thread0.c:54:9:get_time	4	static
+../source/thread0.c:61:6:know_command	8	static
+../source/thread0.c:82:6:UART0_RX_TX_IRQHandler	8	static

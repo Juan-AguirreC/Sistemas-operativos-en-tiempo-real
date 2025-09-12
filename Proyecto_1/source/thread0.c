@@ -4,6 +4,7 @@ static char command_str[11] = {0};
 static uint8_t command = 0;
 static uint8_t data;
 static uint8_t new_data = 0;
+static uint8_t time = 0;
 
 void thread0_init(){
 	UART_init();
@@ -50,6 +51,13 @@ uint8_t get_command(){
 	return command;
 };
 
+uint8_t get_time(){
+	if(time >=0 && time <= 9){
+		return time;
+	}
+	return 0;
+};
+
 void know_command(){
 	if (strcmp(command_str, COMMAND1) == 0){
 		command = 1;
@@ -57,8 +65,11 @@ void know_command(){
 	else if (strcmp(command_str, COMMAND2) == 0){
 		command = 2;
 	}
-	else if (strcmp(command_str, COMMAND3) == 0){
+	else if (command_str[0] == COMMAND3[0] && command_str[1] == COMMAND3[1] && command_str[2] == COMMAND3[2] &&
+			command_str[3] == COMMAND3[3] && command_str[4] == COMMAND3[4] && command_str[5] == COMMAND3[5] &&
+			command_str[6] == COMMAND3[6] ){
 		command = 3;
+		time = command_str[7] - 48;
 	}
 	else if (strcmp(command_str, COMMAND4) == 0){
 		command = 4;

@@ -36,6 +36,7 @@ void GPIO_config(void)
 
 	CLOCK_EnableClock(kCLOCK_PortA);
 	CLOCK_EnableClock(kCLOCK_PortB);
+	CLOCK_EnableClock(kCLOCK_PortE);
 	CLOCK_EnableClock(kCLOCK_PortC);
 
 
@@ -55,6 +56,11 @@ void GPIO_config(void)
 	//Green Led
 	PORT_SetPinMux(PORTE, bit_26, kPORT_MuxAsGpio);
 	GPIO_PinInit(GPIOE, bit_26, &led_config);
+
+	LED_Off(LED_RED);
+	LED_Off(LED_GREEN);
+	LED_Off(LED_BLUE);
+
 }
 
 bool Read_SW2(void) {

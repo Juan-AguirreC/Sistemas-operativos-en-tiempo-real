@@ -21,7 +21,7 @@
 #include "thread1.h"
 #include "thread2.h"
 
-
+uint8_t scheduler_event = 0;
 /* TODO: insert other include files here. */
 
 /* TODO: insert other definitions and declarations here. */
@@ -32,6 +32,7 @@
 
 void Pit_Handler(void);
 void Thread_init(void);
+void Iddle(void);
 
 ThdObj ThreadTable[]= {
 		{Thd_2ms, STANDBY,	2, 0},
@@ -50,19 +51,25 @@ int main(void) {
 	uint8_t tableCounter = 0;
 
 	while(1) {
-		for(tableCounter = 0; tableCounter < 3; tableCounter++){
-			if(ThreadTable[tableCounter].ThreadState == READY){
-				ThreadTable[tableCounter].ThreadState = EXECUTE;
-				ThreadTable[tableCounter].ThreadHandler();
-				ThreadTable[tableCounter].ThreadState = STANDBY;
+		if (scheduler_event >= 1){
+			for(tableCounter = 0; tableCounter < 3; tableCounter++){
+				if(ThreadTable[tableCounter].ThreadState == READY){
+					ThreadTable[tableCounter].ThreadState = EXECUTE;
+					ThreadTable[tableCounter].ThreadHandler();
+					ThreadTable[tableCounter].ThreadState = STANDBY;
+				}
 			}
+			scheduler_event = 0;
 		}
+		else
+			Iddle();
 	}
 	return 0 ;
 }
 
 void Pit_Handler(void){
 	static uint8_t tableCounter = 0;
+	scheduler_event = 1;
 
 	for(tableCounter = 0; tableCounter<3; tableCounter++){
 		ThreadTable[tableCounter].SystemTime++;
@@ -80,5 +87,9 @@ void Thread_init(void){
 	thread0_init();
 	thread1_init();
 	thread2_init();
+}
+
+void Iddle(){
+	__asm("NOP");
 }
 

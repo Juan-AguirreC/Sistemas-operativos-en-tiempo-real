@@ -4,9 +4,9 @@
 
 # Add inputs and outputs from these tool invocations to the build variables 
 C_SRCS += \
+../source/ADC.c \
 ../source/GPIO.c \
 ../source/Proyecto_1.c \
-../source/RMS.c \
 ../source/pit.c \
 ../source/semihost_hardfault.c \
 ../source/thread0.c \
@@ -14,9 +14,9 @@ C_SRCS += \
 ../source/thread2.c 
 
 C_DEPS += \
+./source/ADC.d \
 ./source/GPIO.d \
 ./source/Proyecto_1.d \
-./source/RMS.d \
 ./source/pit.d \
 ./source/semihost_hardfault.d \
 ./source/thread0.d \
@@ -24,9 +24,9 @@ C_DEPS += \
 ./source/thread2.d 
 
 OBJS += \
+./source/ADC.o \
 ./source/GPIO.o \
 ./source/Proyecto_1.o \
-./source/RMS.o \
 ./source/pit.o \
 ./source/semihost_hardfault.o \
 ./source/thread0.o \
@@ -46,7 +46,7 @@ source/%.o: ../source/%.c source/subdir.mk
 clean: clean-source
 
 clean-source:
-	-$(RM) ./source/GPIO.d ./source/GPIO.o ./source/Proyecto_1.d ./source/Proyecto_1.o ./source/RMS.d ./source/RMS.o ./source/pit.d ./source/pit.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o ./source/thread0.d ./source/thread0.o ./source/thread1.d ./source/thread1.o ./source/thread2.d ./source/thread2.o
+	-$(RM) ./source/ADC.d ./source/ADC.o ./source/GPIO.d ./source/GPIO.o ./source/Proyecto_1.d ./source/Proyecto_1.o ./source/pit.d ./source/pit.o ./source/semihost_hardfault.d ./source/semihost_hardfault.o ./source/thread0.d ./source/thread0.o ./source/thread1.d ./source/thread1.o ./source/thread2.d ./source/thread2.o
 
 .PHONY: clean-source
 

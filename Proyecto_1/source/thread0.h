@@ -21,4 +21,7 @@ void set_command(uint8_t com);
 
 uint8_t get_command(void);
 
+uint8_t get_time();
+
+
 void know_command();

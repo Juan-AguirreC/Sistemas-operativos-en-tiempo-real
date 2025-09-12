@@ -1,0 +1,4 @@
+C:\Projects_K64\Sistemas Operativos\Proyecto_1\drivers/fsl_adc16.h:367:20:ADC16_EnableHardwareTrigger	16	static
+C:\Projects_K64\Sistemas Operativos\Proyecto_1\drivers/fsl_adc16.h:491:24:ADC16_GetChannelConversionValue	16	static
+../source/ADC.c:13:6:ADC_Start	8	static
+../source/ADC.c:41:10:ADC_GetValue	8	static
