@@ -1,0 +1,8 @@
+C:\Projects_K64\Sistemas Operativos\Tarea-3_E1\CMSIS/core_cm4.h:1809:22:__NVIC_SetPriority	16	static
+C:\Projects_K64\Sistemas Operativos\Tarea-3_E1\drivers/fsl_port.h:520:20:PORT_ClearPinsInterruptFlags	16	static
+../source/freertos_uart.c:48:5:main	16	static
+../source/freertos_uart.c:81:13:Thread0	16	static
+../source/freertos_uart.c:94:13:Thread1	16	static
+../source/freertos_uart.c:106:13:Thread2	16	static
+../source/freertos_uart.c:129:6:PORTA_IRQHandler	16	static
+../source/freertos_uart.c:141:6:PORTC_IRQHandler	16	static
