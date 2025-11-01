@@ -1,0 +1,4 @@
+C:\Projects_K64\Sistemas Operativos\Ejercicio_pantalla_freertos_hello\drivers/fsl_clock.h:668:20:CLOCK_EnableClock	24	static
+C:\Projects_K64\Sistemas Operativos\Ejercicio_pantalla_freertos_hello\drivers/fsl_clock.h:889:20:CLOCK_SetSimSafeDivs	4	static
+C:\Projects_K64\Sistemas Operativos\Ejercicio_pantalla_freertos_hello\drivers/fsl_port.h:374:20:PORT_SetPinMux	24	static
+../source/SPI.c:14:6:SPI_config	48	static

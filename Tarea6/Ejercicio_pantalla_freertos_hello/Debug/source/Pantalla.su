@@ -1,0 +1,9 @@
+C:\Projects_K64\Sistemas Operativos\Ejercicio_pantalla_freertos_hello\drivers/fsl_port.h:520:20:PORT_ClearPinsInterruptFlags	16	static
+../source/Pantalla.c:99:5:main	24	static
+../source/Pantalla.c:155:13:vSecondsTimerCallback	16	static
+../source/Pantalla.c:159:13:ThreadSeconds	24	static
+../source/Pantalla.c:184:13:ThreadMinutes	24	static
+../source/Pantalla.c:209:13:ThreadHours	24	static
+../source/Pantalla.c:233:13:ThreadAlarm	32	static
+../source/Pantalla.c:264:13:ThreadPrint	40	static
+../source/Pantalla.c:303:6:PORTA_IRQHandler	16	static

@@ -1,0 +1,19 @@
+C:\Projects_K64\Sistemas Operativos\Ejercicio_pantalla_freertos_hello\drivers/fsl_clock.h:668:20:CLOCK_EnableClock	24	static
+C:\Projects_K64\Sistemas Operativos\Ejercicio_pantalla_freertos_hello\drivers/fsl_gpio.h:191:20:GPIO_PortSet	16	static
+C:\Projects_K64\Sistemas Operativos\Ejercicio_pantalla_freertos_hello\drivers/fsl_gpio.h:206:20:GPIO_PortClear	16	static
+C:\Projects_K64\Sistemas Operativos\Ejercicio_pantalla_freertos_hello\drivers/fsl_port.h:374:20:PORT_SetPinMux	24	static
+../source/LCD_nokia.c:118:6:LCD_nokia_init	16	static
+../source/LCD_nokia.c:147:6:LCD_nokia_bitmap	24	static
+../source/LCD_nokia.c:155:6:LCD_nokia_write_byte	32	static
+../source/LCD_nokia.c:173:6:LCD_nokia_send_char	24	static
+../source/LCD_nokia.c:185:6:LCD_nokia_send_string	16	static
+../source/LCD_nokia.c:190:6:LCD_nokia_clear	16	static
+../source/LCD_nokia.c:197:6:LCD_nokia_goto_xy	16	static
+../source/LCD_nokia.c:203:6:LCD_nokia_delay	16	static
+../source/LCD_nokia.c:215:6:LCD_nokia_write_xy_FB	24	static
+../source/LCD_nokia.c:233:6:LCD_nokia_write_string_xy_FB	24	static
+../source/LCD_nokia.c:254:6:LCD_nokia_write_char_xy_FB	24	static
+../source/LCD_nokia.c:273:6:LCD_nokia_set_pixel	24	static
+../source/LCD_nokia.c:285:6:LCD_nokia_clear_pixel	24	static
+../source/LCD_nokia.c:298:6:LCD_nokia_sent_FrameBuffer	16	static
+../source/LCD_nokia.c:310:6:LCD_nokia_clear_range_FrameBuffer	24	static
